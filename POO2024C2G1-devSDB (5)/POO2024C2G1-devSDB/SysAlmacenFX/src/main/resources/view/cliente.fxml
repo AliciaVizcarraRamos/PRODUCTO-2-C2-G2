@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="miContenedor" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ClienteController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="-2.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane layoutX="6.0" layoutY="62.0" style="-fx-background-color: pink;">
+               <children>
+                  <AnchorPane layoutX="2.0">
+                     <children>
+                        <Circle fill="#021426" layoutX="104.0" layoutY="66.0" radius="59.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Pane layoutX="20.0" layoutY="140.0" prefHeight="118.0" prefWidth="171.0" style="-fx-background-color: black;" />
+                        <Label layoutX="76.0" layoutY="267.0" text="buscarCliente" />
+                     </children></AnchorPane>
+               </children></Pane>
+            <Label layoutX="307.0" layoutY="54.0" prefHeight="31.0" prefWidth="190.0" text="CLIENTE" textFill="#181818">
+               <font>
+                  <Font name="Droid Sans Mono Dotted" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="272.0" layoutY="107.0" text="NOMBRES" />
+            <Label layoutX="272.0" layoutY="163.0" prefHeight="31.0" prefWidth="34.0" text="DNI" />
+            <Label layoutX="272.0" layoutY="223.0" prefHeight="26.0" prefWidth="34.0" text="LEGAL" />
+            <Label layoutX="273.0" layoutY="283.0" prefHeight="31.0" prefWidth="91.0" text="TIPO DE DOC;" />
+            <TextField fx:id="txtnombres" layoutX="272.0" layoutY="125.0" />
+            <TextField fx:id="txtdniruc" layoutX="273.0" layoutY="188.0" />
+            <TextField fx:id="txtrepLegal" layoutX="274.0" layoutY="251.0" prefHeight="26.0" prefWidth="150.0" />
+            <ComboBox fx:id="cbxtipoDocumento" layoutX="273.0" layoutY="314.0" prefWidth="100.0" />
+            <TextField layoutX="47.0" layoutY="349.0" />
+            <TableView fx:id="tableView" layoutX="426.0" layoutY="114.0">
+              <columns>
+                <TableColumn prefWidth="75.0" />
+                <TableColumn prefWidth="75.0" />
+              </columns>
+            </TableView>
+            <Button layoutX="302.0" layoutY="460.0" mnemonicParsing="false" onAction="#cancelarAccion" text="cancelar" />
+            <Button layoutX="246.0" layoutY="460.0" mnemonicParsing="false" onAction="#validarFormulario" text="guardar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

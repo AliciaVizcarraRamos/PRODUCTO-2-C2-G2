@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="miContenedor" maxWidth="1.7976931348623157E308" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.VentaController">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="227.0" layoutY="32.0" text="VENTA" />
+            <Label layoutX="21.0" layoutY="64.0" text="PRECIO:" />
+            <TextField fx:id="txtPrecioBase" layoutX="72.0" layoutY="60.0" />
+            <TextField fx:id="txtIGV" layoutX="73.0" layoutY="100.0" />
+            <TextField fx:id="txtNumDoc" layoutX="284.0" layoutY="60.0" />
+            <TextField fx:id="txtSerie" layoutX="285.0" layoutY="100.0" />
+            <Label layoutX="21.0" layoutY="104.0" text="IGV:" />
+            <TextField fx:id="txtFiltroDato" layoutX="286.0" layoutY="141.0" />
+            <TextField fx:id="txtPrecioTotal" layoutX="74.0" layoutY="141.0" />
+            <ComboBox fx:id="cbxCliente" layoutX="14.0" layoutY="255.0" prefWidth="150.0" />
+            <ComboBox fx:id="cbxUsuario" layoutX="14.0" layoutY="320.0" prefWidth="150.0" />
+            <TableView fx:id="tableView" layoutX="195.0" layoutY="181.0" prefHeight="200.0" prefWidth="400.0">
+              <columns>
+                <TableColumn prefWidth="75.0" />
+                <TableColumn prefWidth="75.0" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

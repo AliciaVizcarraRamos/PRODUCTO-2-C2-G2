@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="miContenedor" prefHeight="489.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.RegistrarProveedorControl">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" prefHeight="469.0" prefWidth="712.0">
+            <children>
+                <AnchorPane prefHeight="144.0" prefWidth="579.0">
+                    <children>
+                        <Label layoutX="23.0" layoutY="27.0" text="Proveedor">
+                            <font>
+                                <Font name="Yu Gothic Regular" size="28.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="322.0" layoutY="76.0" text="Filtrar" />
+                        <TextField fx:id="txtFiltroDato" layoutX="322.0" layoutY="101.0" onAction="#filtrarProveedores" />
+                        <Button layoutX="478.0" layoutY="101.0" onAction="#filtrarProveedores" text="Filtrar" />
+                    </children>
+                </AnchorPane>
+                <HBox prefHeight="321.0" prefWidth="712.0">
+                    <children>
+                        <AnchorPane prefHeight="322.0" prefWidth="709.0">
+                            <children>
+                                <GridPane layoutX="14.0" layoutY="17.0" prefHeight="279.0" prefWidth="271.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="96.99999618530273" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="161.00000381469727" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="RUC:" />
+                                        <Label text="NOMBRES:" GridPane.rowIndex="1" />
+                                        <Label text="TELEFONO:" GridPane.rowIndex="2" />
+                                        <Label text="DIRECCION:" GridPane.rowIndex="3" />
+                                        <Label text="RAZON SOCIAL:" GridPane.rowIndex="4" />
+                                        <TextField fx:id="txtRuc" prefHeight="26.0" prefWidth="129.0" GridPane.columnIndex="1" />
+                                        <TextField fx:id="txtNombres" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <TextField fx:id="txtDireccion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField fx:id="txtRazonSocial" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        <Button fx:id="camposValidos" mnemonicParsing="false" onAction="#validarFormulario" style="-fx-alignment: center;" text="Guardar" textAlignment="CENTER" GridPane.rowIndex="5">
+                                            <GridPane.margin>
+                                                <Insets left="10.0" />
+                                            </GridPane.margin>
+                                        </Button>
+                                        <Button mnemonicParsing="false" onAction="#cancelarAccion" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                            <GridPane.margin>
+                                                <Insets left="10.0" />
+                                            </GridPane.margin>
+                                        </Button>
+                                        <Label fx:id="lbnMsg" prefHeight="46.0" prefWidth="271.0" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                                    </children>
+                                </GridPane>
+                                <AnchorPane layoutX="311.0" layoutY="-4.0" prefHeight="322.0" prefWidth="396.0">
+                                    <children>
+                                        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="304.0" prefWidth="375.0">
+                                            <columns>
+                                                <TableColumn fx:id="colRuc" text="RUC" />
+                                                <TableColumn fx:id="colNombres" text="Nombres" />
+                                                <TableColumn fx:id="colTelefono" text="Teléfono" />
+                                                <TableColumn fx:id="colDireccion" text="Dirección" />
+                                                <TableColumn fx:id="colRazonSocial" text="Razón Social" />
+                                            </columns>
+                                        </TableView>
+                                        <Button layoutX="14.0" layoutY="320.0" onAction="#eliminarProveedor" text="Eliminar" />
+                                        <Button layoutX="90.0" layoutY="320.0" onAction="#actualizarProveedor" text="Actualizar" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
